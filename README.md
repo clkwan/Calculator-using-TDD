@@ -13,11 +13,11 @@ This calculator will allow users to input two numbers and execute the following 
 * cosine 
 * find the range between the two numbers
 
-### Usage
+## Usage
 
 ## Running test.py
 
 ### Test Cases
 
-### Author
+## Author
 William Kwan
