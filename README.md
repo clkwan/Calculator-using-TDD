@@ -11,7 +11,7 @@ This calculator will allow users to input two numbers and execute the following 
 * mean
 * power
 * cosine 
-* range between the two numbers
+* find the range between the two numbers
 
 ### Usage
 
