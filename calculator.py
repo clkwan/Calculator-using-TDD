@@ -36,6 +36,8 @@ def square_root(num):
         return math.sqrt(num[0])
     except TypeError:
         pass
+    except ValueError:
+        pass
 
 
 def mean(num):
@@ -98,49 +100,49 @@ if __name__ == '__main__':
         num = []
         operation = get_operation()
         if operation == 1:
-            answer = add(get_num(operation))
+            answer = round(add(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 2:
-            answer = subtract(get_num(operation))
+            answer = round(subtract(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 3:
-            answer = multiply(get_num(operation))
+            answer = round(multiply(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 4:
-            answer = divide(get_num(operation))
+            answer = round(divide(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 5:
-            answer = square_root(get_num(operation))
+            answer = round(square_root(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 6:
-            answer = mean(get_num(operation))
+            answer = round(mean(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation is 7:
-            answer = power(get_num(operation))
+            answer = round(power(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 8:
-            answer = cosine(get_num(operation))
+            answer = round(cosine(get_num(operation)), 4)
             if answer is None:
                 pass
             else:
@@ -151,5 +153,10 @@ if __name__ == '__main__':
                 pass
             else:
                 print('Your answer is', end=' ')
-                for x in range(answer[0], answer[1]+1):
-                    print(x, end=' ')
+                if answer[0] > answer[1]:
+                    answer.sort()
+                    for x in list(reversed(range(answer[0], answer[1] + 1))):
+                        print(x, end=' ')
+                else:
+                    for x in range(answer[0], answer[1]+1):
+                        print(x, end=' ')
