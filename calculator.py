@@ -62,6 +62,10 @@ def cosine(num):
 
 
 def get_operation():
+    '''
+    Asks user what operation he/she wants
+    :return: operation #
+    '''
     print('Welcome to William\'s Calculator!')
     try:
         operation = int(input('Please choose from the following operations:\n'
@@ -80,6 +84,12 @@ def get_operation():
 
 
 def get_num(operation):
+    '''
+    Depending on the operation, this functions asks the user one, two, or user-defined number
+    of inputs
+    :param operation: operation number
+    :return: operand(s)
+    '''
     try:
         if operation in (2, 3, 4, 7, 9):
             num.append(int(input('Please enter your first number: ')))
@@ -105,6 +115,10 @@ def get_num(operation):
 
 
 if __name__ == '__main__':
+    '''
+    Once operation and operands are collected, flow is directed to the respective operation
+    function.
+    '''
         num = []
         operation = get_operation()
         if operation == 1:
