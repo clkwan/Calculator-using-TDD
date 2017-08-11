@@ -11,6 +11,7 @@ with open('calc_test.csv', 'w') as csvfile:
 
 class TestClass(unittest.TestCase):
     def setUp(self):
+        #change filename to change the log filename and directory
         logging.basicConfig(filename='C:/Users/clkwa/PycharmProjects/RapidSOS_Assessment/calc_test.csv',
                             filemode='a',
                             level=logging.DEBUG,
