@@ -19,9 +19,9 @@ folder and typing
 ```
 python calculator.py
 ```
-When you run the program, the a welcome prompt will ask you to choose an operation from a list. Select the 
+When you run the program, a welcome prompt will ask you to choose an operation from a list. Select the 
 operation by entering the respective number and depending on the operation, the script will ask you one,
-two, or multiple numbers. For operations that can take in multiple numbers, the script will ask you how
+two, or multiple numbers to input. For operations that can take in multiple numbers, the script will ask you how
 many numbers you would like to input and then repeat the input prompt until the number of inputs has been
 met. 
 
