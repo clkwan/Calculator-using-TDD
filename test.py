@@ -2,7 +2,6 @@ import csv
 import datetime
 import logging
 import unittest
-
 import calculator
 
 with open('calc_test.csv', 'w') as csvfile:
