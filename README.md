@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This calculator will allow users to input two numbers and execute the following operations on them: 
+This calculator will allow users to input numbers and execute the following operations on them: 
 * addition
 * subtraction
 * multiplication
