@@ -63,7 +63,8 @@ def cosine(num):
 
 def get_operation():
     print('Welcome to William\'s Calculator!')
-    operation = int(input('Please choose from the following operations:\n'
+    try:
+        operation = int(input('Please choose from the following operations:\n'
                           '1. addition\n'
                           '2. subtraction\n'
                           '3. multiplication\n'
@@ -73,6 +74,8 @@ def get_operation():
                           '7. power\n'
                           '8. cosine\n'
                           '9. range\n'))
+    except ValueError:
+        print('That was not a valid operation. Please enter a number from the list.')
     return operation
 
 
