@@ -37,7 +37,8 @@ python -m unittest test.py
 ```
 Running test.py will output a test report csv file in the directory called "calc_test.py." The file will
 contain the timestamp of when the test was ran, test case ID, Test Case, Actual Output, Expected Ouput, and
-whether or not the test passed or failed.
+whether or not the test passed or failed. To learn more about running the unittest python library check out the
+[unittest framework](https://docs.python.org/3.6/library/unittest.html#).
 
 ## Author
 William Kwan
