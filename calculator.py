@@ -88,61 +88,66 @@ def get_num(operation):
                 num.append(int(input('Please enter your number: ')))
             return num
         elif operation in (5, 8):
-            num.append(int(input('Please enter your first number: ')))
-            return num
+            if operation == 5:
+                num.append(int(input('Please enter your first number: ')))
+                if num[0] < 0:
+                    print('The square root of a number must be positive!')
+                else:
+                    num.append(int(input('Please enter your first number: ')))
+                    return num
         else:
             print('Number is not an operation')
     except ValueError:
-        print('Please enter a valid number')
+        print('That was not a valid number. Please try again.')
 
 
 if __name__ == '__main__':
         num = []
         operation = get_operation()
         if operation == 1:
-            answer = round(add(get_num(operation)), 4)
+            answer = add(get_num(operation))
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 2:
-            answer = round(subtract(get_num(operation)), 4)
+            answer = subtract(get_num(operation))
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 3:
-            answer = round(multiply(get_num(operation)), 4)
+            answer = multiply(get_num(operation))
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 4:
-            answer = round(divide(get_num(operation)), 4)
+            answer = divide(get_num(operation))
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 5:
-            answer = round(square_root(get_num(operation)), 4)
+            answer = square_root(get_num(operation))
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 6:
-            answer = round(mean(get_num(operation)), 4)
+            answer = mean(get_num(operation))
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation is 7:
-            answer = round(power(get_num(operation)), 4)
+            answer = power(get_num(operation))
             if answer is None:
                 pass
             else:
                 print('Your answer is {}'.format(answer))
         elif operation == 8:
-            answer = round(cosine(get_num(operation)), 4)
+            answer = cosine(get_num(operation))
             if answer is None:
                 pass
             else:
