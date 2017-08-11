@@ -28,7 +28,7 @@ met.
 ### Things to note
 * Entering a non-number will end the script and will ask the user to please try again.
 * Square root of a number must be positive. Imaginary numbers are not allow.
-* Floating point numbers are allowed
+* Decimal numbers are allowed
 
 ## Running test.py
 test.py can be run using an IDE or via command line by directing to the respective folder and typing 
