@@ -10,21 +10,21 @@ def add(num):
 
 def subtract(num):
     try:
-        return num[0]-num[1]
+        return num[0] - num[1]
     except TypeError:
         pass
 
 
 def multiply(num):
     try:
-        return num[0]*num[1]
+        return num[0] * num[1]
     except TypeError:
         pass
 
 
 def divide(num):
     try:
-        return num[0]/num[1]
+        return num[0] / num[1]
     except TypeError:
         pass
     except ZeroDivisionError:
@@ -49,7 +49,7 @@ def mean(num):
 
 def power(num):
     try:
-        return num[0]**num[1]
+        return num[0] ** num[1]
     except TypeError:
         pass
 
@@ -69,15 +69,15 @@ def get_operation():
     print('Welcome to William\'s Calculator!')
     try:
         operation = int(input('Please choose from the following operations:\n'
-                          '1. addition\n'
-                          '2. subtraction\n'
-                          '3. multiplication\n'
-                          '4. division\n'
-                          '5. square root\n'
-                          '6. mean\n'
-                          '7. power\n'
-                          '8. cosine\n'
-                          '9. range\n'))
+                              '1. addition\n'
+                              '2. subtraction\n'
+                              '3. multiplication\n'
+                              '4. division\n'
+                              '5. square root\n'
+                              '6. mean\n'
+                              '7. power\n'
+                              '8. cosine\n'
+                              '9. range\n'))
     except ValueError:
         print('That was not a valid operation. Please enter a number from the list.')
     return operation
@@ -119,66 +119,66 @@ if __name__ == '__main__':
     Once operation and operands are collected, flow is directed to the respective operation
     function.
     '''
-        num = []
-        operation = get_operation()
-        if operation == 1:
-            answer = add(get_num(operation))
-            if answer is None:
-                pass
+    num = []
+    operation = get_operation()
+    if operation == 1:
+        answer = add(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation == 2:
+        answer = subtract(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation == 3:
+        answer = multiply(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation == 4:
+        answer = divide(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation == 5:
+        answer = square_root(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation == 6:
+        answer = mean(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation is 7:
+        answer = power(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation == 8:
+        answer = cosine(get_num(operation))
+        if answer is None:
+            pass
+        else:
+            print('Your answer is {}'.format(answer))
+    elif operation == 9:
+        answer = get_num(operation)
+        if answer is None:
+            pass
+        else:
+            print('Your answer is', end=' ')
+            if answer[0] > answer[1]:
+                answer.sort()
+                for x in list(reversed(range(answer[0], answer[1] + 1))):
+                    print(x, end=' ')
             else:
-                print('Your answer is {}'.format(answer))
-        elif operation == 2:
-            answer = subtract(get_num(operation))
-            if answer is None:
-                pass
-            else:
-                print('Your answer is {}'.format(answer))
-        elif operation == 3:
-            answer = multiply(get_num(operation))
-            if answer is None:
-                pass
-            else:
-                print('Your answer is {}'.format(answer))
-        elif operation == 4:
-            answer = divide(get_num(operation))
-            if answer is None:
-                pass
-            else:
-                print('Your answer is {}'.format(answer))
-        elif operation == 5:
-            answer = square_root(get_num(operation))
-            if answer is None:
-                pass
-            else:
-                print('Your answer is {}'.format(answer))
-        elif operation == 6:
-            answer = mean(get_num(operation))
-            if answer is None:
-                pass
-            else:
-                print('Your answer is {}'.format(answer))
-        elif operation is 7:
-            answer = power(get_num(operation))
-            if answer is None:
-                pass
-            else:
-                print('Your answer is {}'.format(answer))
-        elif operation == 8:
-            answer = cosine(get_num(operation))
-            if answer is None:
-                pass
-            else:
-                print('Your answer is {}'.format(answer))
-        elif operation == 9:
-            answer = get_num(operation)
-            if answer is None:
-                pass
-            else:
-                print('Your answer is', end=' ')
-                if answer[0] > answer[1]:
-                    answer.sort()
-                    for x in list(reversed(range(answer[0], answer[1] + 1))):
-                        print(x, end=' ')
-                else:
-                    for x in range(answer[0], answer[1]+1):
-                        print(x, end=' ')
+                for x in range(answer[0], answer[1] + 1):
+                    print(x, end=' ')
