@@ -14,7 +14,7 @@ This calculator will allow users to input numbers and execute the following oper
 * find the range between the two numbers
 
 ## Usage
-You can run calculator.py in your favorite Python IDE or via command line by directing to the respective 
+You can run calculator.py in your favorite Python IDE or via command line by navigating to the respective 
 folder and typing 
 ```
 python calculator.py
@@ -37,8 +37,9 @@ python -m unittest test.py
 ```
 Running test.py will output a test report csv file in the directory called "calc_test.py." The file will
 contain the timestamp of when the test was ran, test case ID, Test Case, Actual Output, Expected Ouput, and
-whether or not the test passed or failed as well as printing the information onton the consol. To learn more 
-about running the unittest python library check out the [unittest framework](https://docs.python.org/3.6/library/unittest.html#).
+whether or not the test passed or failed as well as printing the information onton the console. To change the 
+log filename and directory, change the filename setting in the logging logging config located in the setUp module.
+To learn more about running the unittest python library check out the [unittest framework](https://docs.python.org/3.6/library/unittest.html#).
 
 ### Changing the Test Cases
 Test cases can be changed by editing the test_case and expected_result tuples
